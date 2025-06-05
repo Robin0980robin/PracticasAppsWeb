@@ -55,7 +55,7 @@ AppDataSource.initialize().then(async () => {
     );
 
     await crearProgreso(
-      20 * (i + 1), // 20, 40, 60...
+      20 * (i + 1),
       estudiantes[i],
       cursos[i]
     );

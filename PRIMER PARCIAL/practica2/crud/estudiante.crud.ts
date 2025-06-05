@@ -3,14 +3,12 @@ import { Estudiante } from "../entity/Estudiante";
 
 const repo = AppDataSource.getRepository(Estudiante);
 
-// Crear estudiante
 export const crearEstudiante = async (nombre: string, email: string) => {
   const nuevo = repo.create({ nombre, email });
   await repo.save(nuevo);
   console.log("Estudiante creado:", nuevo);
 };
 
-// Leer todos los estudiantes
 export const listarEstudiantes = async () => {
   const estudiantes = await repo.find();
   console.log("Estudiantes:", estudiantes);
